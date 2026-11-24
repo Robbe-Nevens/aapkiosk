@@ -1,0 +1,7 @@
+Handleidingen voor de vrijwilligers van Jeugdhuis Den Aap.
+
+Zet hier de PDF's die achter het vraagteken op het tegelscherm verschijnen.
+- De bestandsnaam wordt de titel: "01_Kassa_openen.pdf" toont "Kassa openen".
+- Het nummer vooraan bepaalt alleen de volgorde.
+- Na een wijziging moet je een nieuwe APK bouwen.
+Dit bestand zelf verschijnt niet in de lijst (alleen .pdf-bestanden).

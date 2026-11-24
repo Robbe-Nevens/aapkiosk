@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView, FlatList, useWindowDimensions } from 'react-native';
 import StatusBar from './StatusBar';
 import MultiAppHeader from './MultiAppHeader';
+import { DEN_AAP_FRAME_WIDTH, DEN_AAP_PINK } from '../config/branding';
+import ManualsModal from './ManualsModal';
 import { DEFAULT_MULTI_APP_APPEARANCE, MultiAppAppearance, getMultiAppForeground } from '../types/multiAppAppearance';
 import Icon from './Icon';
 import AppLauncherModule, { AppInfo } from '../utils/AppLauncherModule';
@@ -87,10 +89,12 @@ const ExternalAppOverlay: React.FC<ExternalAppOverlayProps> = ({
   const APP_GRID_NUM_COLUMNS = 4;
   const APP_GRID_HORIZONTAL_PADDING = 16;
   const APP_GRID_GAP = 8;
+  // AapKiosk: the pink frame in App.tsx takes DEN_AAP_FRAME_WIDTH off each side
   const appTileWidth =
-    (windowWidth - APP_GRID_HORIZONTAL_PADDING * 2 - APP_GRID_GAP * (APP_GRID_NUM_COLUMNS - 1)) /
+    (windowWidth - DEN_AAP_FRAME_WIDTH * 2 - APP_GRID_HORIZONTAL_PADDING * 2 - APP_GRID_GAP * (APP_GRID_NUM_COLUMNS - 1)) /
     APP_GRID_NUM_COLUMNS;
 
+  const [manualsVisible, setManualsVisible] = useState(false);
   const [appLabels, setAppLabels] = useState<Record<string, string>>({});
   const [appIcons, setAppIcons] = useState<Record<string, string>>({});
   
@@ -246,8 +250,31 @@ const ExternalAppOverlay: React.FC<ExternalAppOverlayProps> = ({
             theme={statusBarTheme}
           />
         )}
-        <MultiAppHeader appearance={multiAppAppearance} />
+        {/* AapKiosk: "?" top right opens the volunteer manuals */}
+        <View style={styles.multiAppTopRow}>
+          <View style={styles.multiAppHeaderSlot}>
+            <MultiAppHeader appearance={multiAppAppearance} />
+          </View>
+          <TouchableOpacity
+            style={styles.helpButton}
+            onPress={() => setManualsVisible(true)}
+            activeOpacity={0.7}
+            accessibilityLabel={t('components.manuals.title')}
+            testID="manuals-button"
+          >
+            <Icon name="help-circle-outline" size={40} color={DEN_AAP_PINK} />
+          </TouchableOpacity>
+        </View>
+        <ManualsModal visible={manualsVisible} onClose={() => setManualsVisible(false)} />
+        {/* AapKiosk: a large Den Aap logo above the apps, centred with them as one block */}
         <FlatList
+          ListHeaderComponent={
+            <Image
+              source={require('../assets/images/logo.png')}
+              style={styles.centerLogo}
+              resizeMode="contain"
+            />
+          }
           data={homeScreenApps}
           renderItem={renderAppIcon}
           keyExtractor={item => item.packageName}
@@ -314,7 +341,7 @@ const ExternalAppOverlay: React.FC<ExternalAppOverlayProps> = ({
           </View>
 
           {/* Title */}
-          <Text style={styles.title}>FreeKiosk</Text>
+          <Text style={styles.title}>AapKiosk</Text>
           <Text style={styles.subtitle}>{t('components.externalAppOverlay.subtitle')}</Text>
 
           {/* Status Message */}
@@ -538,12 +565,35 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
   // Multi-app home screen styles
+  multiAppTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  multiAppHeaderSlot: {
+    flex: 1,
+  },
+  helpButton: {
+    width: 56,
+    height: 56,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  centerLogo: {
+    width: 360,
+    height: 218,
+    alignSelf: 'center',
+    marginBottom: 32,
+  },
+  // AapKiosk: the apps sit in the middle of the screen, horizontally and vertically
   appGrid: {
+    flexGrow: 1,
+    justifyContent: 'center',
     paddingHorizontal: 16,
-    paddingTop: 20,
+    paddingVertical: 20,
   },
   appGridRow: {
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     gap: 8,
     marginBottom: 16,
   },

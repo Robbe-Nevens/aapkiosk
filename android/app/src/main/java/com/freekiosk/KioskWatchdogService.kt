@@ -658,7 +658,7 @@ class KioskWatchdogService : Service() {
 
     private fun buildNotification(): Notification {
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("FreeKiosk")
+            .setContentTitle("AapKiosk")
             // Keep-alive now covers MQTT and cloud enrolment, so name what it does rather
             // than one of the two features that ask for it.
             .setContentText(if (keepAliveOnly) "Staying connected" else "Kiosk mode active")

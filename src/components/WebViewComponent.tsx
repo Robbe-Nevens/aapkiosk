@@ -31,6 +31,7 @@ import { useNavigation } from '@react-navigation/native';
 import PrintModule from '../utils/PrintModule';
 import SilentPrintModule from '../utils/SilentPrintModule';
 import { CLOUD_ENABLED } from '../config/features';
+import { DEN_AAP_BLACK, DEN_AAP_PINK } from '../config/branding';
 import { CloudSyncService, PROVISIONING_STATUS_EVENT } from '../utils/CloudSyncService';
 import type { ProvisioningStatus } from '../utils/CloudSyncService';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -1350,7 +1351,7 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
           }
         } else if (data.type === 'PRINT_REQUEST') {
           // Handle print request from window.print()
-          PrintModule.printWebView(data.title || 'FreeKiosk Print', data.paperSize || 'A4')
+          PrintModule.printWebView(data.title || 'AapKiosk Print', data.paperSize || 'A4')
             .then(() => {
               console.log('[WebView] Print job started');
               if (data.framePrint) clearFramePrintWhenDone();
@@ -1475,11 +1476,6 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
     );
   };
 
-  const handleOpenGitHub = (): void => {
-    Linking.openURL('https://github.com/rushb-fr/freekiosk').catch(err =>
-      console.error('[FreeKiosk] Failed to open GitHub URL:', err)
-    );
-  };
 
   if (!url) {
     return (
@@ -1502,7 +1498,7 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
             </View>
 
             {/* Title */}
-            <Text style={styles.welcomeTitle}>FreeKiosk</Text>
+            <Text style={styles.welcomeTitle}>AapKiosk</Text>
             <Text style={styles.welcomeSubtitle}>
               {t('components.webView.welcomeSubtitle')}
             </Text>
@@ -1518,7 +1514,7 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
                 text={t('components.webView.featureOptimalPerformance')}
               />
               <FeatureItem
-                icon="github"
+                icon="star"
                 text={t('components.webView.featureOpenSource')}
               />
             </View>
@@ -1542,7 +1538,7 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
               onPress={handleNavigateToSettings}
               activeOpacity={0.8}
             >
-              <Icon name="rocket-launch" size={20} color="#2b7fff" style={styles.buttonLeadingIcon} />
+              <Icon name="rocket-launch" size={20} color={DEN_AAP_PINK} style={styles.buttonLeadingIcon} />
               <Text style={styles.setupButtonText}>
                 {t('components.webView.startConfiguration')}
               </Text>
@@ -1583,10 +1579,6 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
             </View>
 
             {/* Footer */}
-            <TouchableOpacity onPress={handleOpenGitHub} activeOpacity={0.7} style={styles.githubLink}>
-              <Icon name="github" size={16} color="rgba(255, 255, 255, 0.85)" style={styles.githubLinkIcon} />
-              <Text style={styles.githubLinkText}>{t('components.webView.supportOnGithub')}</Text>
-            </TouchableOpacity>
             <Text style={styles.footerText}>
               {appVersion ? t('components.webView.footerVersion', { version: appVersion }) : t('components.webView.footerByRushb')}
             </Text>
@@ -1959,7 +1951,7 @@ const WebViewComponent = forwardRef<WebViewComponentRef, WebViewComponentProps>(
 
 const FeatureItem: React.FC<{ icon: IconName; text: string }> = ({ icon, text }) => (
   <View style={styles.featureItem}>
-    <Icon name={icon} size={22} color="#2b7fff" style={styles.featureIcon} />
+    <Icon name={icon} size={22} color={DEN_AAP_PINK} style={styles.featureIcon} />
     <Text style={styles.featureText}>{text}</Text>
   </View>
 );
@@ -1969,7 +1961,7 @@ const styles = StyleSheet.create({
   // WELCOME SCREEN STYLES
   welcomeContainer: {
     flex: 1,
-    backgroundColor: '#2b7fff',
+    backgroundColor: DEN_AAP_BLACK,
   },
   scrollContent: {
     flexGrow: 1,
@@ -1987,18 +1979,18 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   logoCircle: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    backgroundColor: DEN_AAP_BLACK,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 3,
-    borderColor: 'rgba(255, 255, 255, 0.4)',
+    borderColor: DEN_AAP_PINK,
   },
   logoImage: {
-    width: 80,
-    height: 80,
+    width: 150,
+    height: 150,
     tintColor: undefined,
   },
   welcomeTitle: {
@@ -2072,7 +2064,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   setupButtonText: {
-    color: '#2b7fff',
+    color: DEN_AAP_BLACK,
     fontSize: 18,
     fontWeight: 'bold',
   },
@@ -2141,20 +2133,6 @@ const styles = StyleSheet.create({
   cloudPromoSecondaryText: {
     color: '#fff',
     fontSize: 14,
-    textDecorationLine: 'underline',
-  },
-  githubLink: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 24,
-  },
-  githubLinkIcon: {
-    marginRight: 6,
-  },
-  githubLinkText: {
-    color: 'rgba(255, 255, 255, 0.85)',
-    fontSize: 13,
     textDecorationLine: 'underline',
   },
   footerText: {

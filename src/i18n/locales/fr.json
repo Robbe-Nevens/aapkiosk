@@ -1,7 +1,7 @@
 {
   "common": {},
   "general": {
-    "externalAppTvWarning": "Sur un téléviseur, aucune touche n'arrive à FreeKiosk tant qu'une autre application est au premier plan : la télécommande ne peut donc pas vous ramener à ces réglages. Utilisez FreeKiosk Cloud, MQTT, l'API REST ou adb pour les modifier.",
+    "externalAppTvWarning": "Sur un téléviseur, aucune touche n'arrive à AapKiosk tant qu'une autre application est au premier plan : la télécommande ne peut donc pas vous ramener à ces réglages. Utilisez FreeKiosk Cloud, MQTT, l'API REST ou adb pour les modifier.",
     "appearance": {
       "title": "Apparence multi-applications",
       "background": "Couleur de fond",
@@ -116,7 +116,7 @@
       "password": "Mot de passe",
       "passwordPlaceholder": "Mot de passe",
       "passwordHint": "Stocké dans le trousseau de l'appareil (pas en texte brut)",
-      "info": "Quand un site renvoie une réponse 401 Non autorisé, FreeKiosk répondra automatiquement avec ces identifiants. Laisser le nom d'utilisateur vide pour désactiver."
+      "info": "Quand un site renvoie une réponse 401 Non autorisé, AapKiosk répondra automatiquement avec ces identifiants. Laisser le nom d'utilisateur vide pour désactiver."
     },
     "urlRotation": {
       "title": "Rotation d'URL",
@@ -169,9 +169,9 @@
     },
     "usageStats": {
       "granted": "Accès à l'utilisation accordé",
-      "grantedHint": "La surveillance de relance automatique est active. FreeKiosk peut détecter quand l'application externe se ferme.",
+      "grantedHint": "La surveillance de relance automatique est active. AapKiosk peut détecter quand l'application externe se ferme.",
       "required": "Accès à l'utilisation requis",
-      "requiredHint": "Requis pour la relance automatique. Sans cela, FreeKiosk ne peut pas détecter quand l'application externe se ferme ou plante.",
+      "requiredHint": "Requis pour la relance automatique. Sans cela, AapKiosk ne peut pas détecter quand l'application externe se ferme ou plante.",
       "grantButton": "Accorder l'accès à l'utilisation"
     },
     "password": {
@@ -262,9 +262,9 @@
     "brightness": {
       "title": "Contrôle de luminosité",
       "appControl": "Contrôle de luminosité par l'application",
-      "hintManaged": "FreeKiosk gère la luminosité de l'écran",
+      "hintManaged": "AapKiosk gère la luminosité de l'écran",
       "hintSystem": "Le système gère la luminosité (Tasker, réglages Android, etc.)",
-      "systemInfo": "La luminosité est gérée par le système. Des outils externes comme Tasker peuvent contrôler la luminosité sans interférence de FreeKiosk."
+      "systemInfo": "La luminosité est gérée par le système. Des outils externes comme Tasker peuvent contrôler la luminosité sans interférence de AapKiosk."
     },
     "manualBrightness": {
       "title": "Luminosité manuelle",
@@ -355,14 +355,14 @@
       "proximityInfo": "Courte portée (quelques centimètres) : passez la main devant l'écran pour le réveiller. Contrairement à la détection par caméra, cela ne se déclenche jamais sur des changements de lumière et consomme presque pas de batterie.",
       "howItWorksTitle": "Comment ça marche",
       "howItWorksAfter": "• Après {{delay}} minute(s) sans interaction, l'économiseur d'écran s'active",
-      "howItWorksExternalApp": "• FreeKiosk revient au premier plan pour afficher l'économiseur d'écran ; l'application externe reprend au réveil",
+      "howItWorksExternalApp": "• AapKiosk revient au premier plan pour afficher l'économiseur d'écran ; l'application externe reprend au réveil",
       "howItWorksTouch": "• Toucher l'écran pour réveiller l'appareil",
       "howItWorksMotion": "• Un mouvement devant la caméra réveille aussi l'écran",
       "howItWorksProximity": "• Une main proche du capteur de proximité réveille aussi l'écran",
       "howItWorksBrightness": "• La luminosité normale est restaurée automatiquement",
       "howItWorksDimOverApp": "• L'écran s'assombrit par-dessus l'application externe, qui reste ouverte ; le premier appui le réveille",
       "keepExternalApp": "Garder l'application au premier plan",
-      "keepExternalAppHint": "Assombrit l'écran par-dessus l'application externe au lieu de revenir à FreeKiosk, pour qu'elle ne se recharge pas au réveil. Le premier appui ne fait que réveiller l'écran. Le réveil par mouvement ou par proximité n'est pas disponible avec cette option."
+      "keepExternalAppHint": "Assombrit l'écran par-dessus l'application externe au lieu de revenir à AapKiosk, pour qu'elle ne se recharge pas au réveil. Le premier appui ne fait que réveiller l'écran. Le réveil par mouvement ou par proximité n'est pas disponible avec cette option."
     },
     "screenSchedule": {
       "title": "Programmation de mise en veille",
@@ -450,11 +450,11 @@
       "pausePage": "Mettre la page en pause écran éteint",
       "pausePageHint": "Arrête l'activité propre de la page (minuteries, chargement d'images) quand l'écran est réellement éteint (commande d'extinction, verrouillage, bouton marche, planification), pour qu'un diaporama ne continue pas à télécharger. Elle reprend à l'allumage. Désactivé par défaut : un tableau de bord qui doit rester à jour doit le laisser désactivé.",
       "intercom": "Mode audio bidirectionnel (interphone)",
-      "intercomHint": "À activer pour l'audio bidirectionnel WebRTC / talkie-walkie (ex. une carte interphone de sonnette Home Assistant / go2rtc). Pendant que la page web utilise activement le microphone, FreeKiosk bascule l'appareil en mode audio de communication pour que le canal retour du micro transmette, puis restaure l'audio normal quand vous arrêtez de parler. Laisser désactivé pour une navigation normale — ça ne s'active que quand le micro est utilisé."
+      "intercomHint": "À activer pour l'audio bidirectionnel WebRTC / talkie-walkie (ex. une carte interphone de sonnette Home Assistant / go2rtc). Pendant que la page web utilise activement le microphone, AapKiosk bascule l'appareil en mode audio de communication pour que le canal retour du micro transmette, puis restaure l'audio normal quand vous arrêtez de parler. Laisser désactivé pour une navigation normale — ça ne s'active que quand le micro est utilisé."
     },
     "orientation": {
       "title": "Orientation de l'écran",
-      "hint": "Verrouille l'écran de FreeKiosk dans une orientation, ou suit l'appareil. Ne s'applique pas à une app externe.",
+      "hint": "Verrouille l'écran de AapKiosk dans une orientation, ou suit l'appareil. Ne s'applique pas à une app externe.",
       "auto": "Suivre l'appareil",
       "portrait": "Portrait",
       "landscape": "Paysage",
@@ -481,7 +481,7 @@
       "enableHint": "Empêche les utilisateurs de quitter l'application kiosque. Nécessite un code PIN pour quitter.",
       "disabledWarning": "Avec le mode verrouillé désactivé, les utilisateurs peuvent quitter l'application normalement",
       "screenPinningInfo": "Épinglage d'écran activé : seul le geste 5-tap + code PIN permet de quitter",
-      "noDeviceOwnerWarning": "Sans Device Owner, les utilisateurs peuvent quitter via le geste Retour + Applications récentes. Définissez FreeKiosk comme Device Owner pour un verrouillage complet.",
+      "noDeviceOwnerWarning": "Sans Device Owner, les utilisateurs peuvent quitter via le geste Retour + Applications récentes. Définissez AapKiosk comme Device Owner pour un verrouillage complet.",
       "externalAppNoOwnerError": "Device Owner requis : le mode verrouillé ne fonctionnera pas en mode Application externe sans les privilèges Device Owner.",
       "externalAppOwnerInfo": "Mode verrouillé activé : seul le geste 5-tap n'importe où sur l'écran + code PIN permet de quitter l'application externe",
       "blockPowerMenu": "Bloquer le menu d'alimentation",
@@ -493,7 +493,7 @@
       "blockFactoryReset": "Bloquer la réinitialisation d'usine",
       "blockFactoryResetHint": "Retire l'option « Réinitialisation d'usine » de l'application Réglages système (restriction Device Owner). Utile quand l'application Réglages est dans votre liste blanche multi-applications, pour que les utilisateurs verrouillés ne puissent pas effacer l'appareil. Persiste après redémarrage. Prend effet immédiatement, même hors du mode verrouillé.",
       "allowRemoteScreenshots": "Autoriser les captures d'écran à distance",
-      "allowRemoteScreenshotsHint": "Le mode verrouillé bloque la capture d'écran sur tout l'appareil (Alimentation+Volume bas), ce qui empêche aussi l'API REST /api/screenshot et les commandes de capture cloud de capturer une autre application que FreeKiosk (mode multi-applications). Activez ceci pour laisser FreeKiosk lever ce blocage le temps d'une capture à distance, puis le rétablir. Nécessite le service d'accessibilité FreeKiosk et Android 11+.",
+      "allowRemoteScreenshotsHint": "Le mode verrouillé bloque la capture d'écran sur tout l'appareil (Alimentation+Volume bas), ce qui empêche aussi l'API REST /api/screenshot et les commandes de capture cloud de capturer une autre application que AapKiosk (mode multi-applications). Activez ceci pour laisser AapKiosk lever ce blocage le temps d'une capture à distance, puis le rétablir. Nécessite le service d'accessibilité AapKiosk et Android 11+.",
       "allowHardwareScreenshots": "Autoriser les captures d'écran avec les boutons",
       "allowHardwareScreenshotsHint": "Le mode verrouillé bloque la combinaison de capture d'écran Alimentation+Volume bas pour toute personne utilisant l'appareil. Activez ceci pour l'autoriser à nouveau quand le mode verrouillé est actif. Toute personne devant l'appareil peut alors capturer l'écran. Prend effet au prochain démarrage du mode verrouillé.",
       "remoteScreenshotWarning": "Pendant qu'une capture d'écran à distance est prise, la combinaison matérielle de capture d'écran est brièvement disponible pour quiconque se trouve devant l'appareil.",
@@ -504,19 +504,19 @@
     "autoLaunch": {
       "title": "Lancement automatique",
       "launchOnBoot": "Lancer au démarrage",
-      "launchOnBootHint": "Lancer automatiquement FreeKiosk au démarrage de l'appareil",
+      "launchOnBootHint": "Lancer automatiquement AapKiosk au démarrage de l'appareil",
       "appearOnTopInfo": "Assurez-vous que l'autorisation « Apparaître au-dessus » est activée dans les réglages système pour un lancement automatique fiable.",
-      "tvBootBlocked": "Sans « Affichage par-dessus les autres applications », Android empêche FreeKiosk de démarrer au lancement de ce téléviseur : après une coupure de courant, l'écran d'accueil du téléviseur reste affiché et rien ne se lance. Ce téléviseur n'a pas d'écran pour l'accorder. Depuis un ordinateur, une seule fois :",
-      "tvBootGranted": "« Affichage par-dessus les autres applications » est accordé : FreeKiosk peut démarrer au lancement.",
+      "tvBootBlocked": "Sans « Affichage par-dessus les autres applications », Android empêche AapKiosk de démarrer au lancement de ce téléviseur : après une coupure de courant, l'écran d'accueil du téléviseur reste affiché et rien ne se lance. Ce téléviseur n'a pas d'écran pour l'accorder. Depuis un ordinateur, une seule fois :",
+      "tvBootGranted": "« Affichage par-dessus les autres applications » est accordé : AapKiosk peut démarrer au lancement.",
       "openSystemSettings": "Ouvrir les réglages système",
       "screenLockCompat": "Compatibilité verrouillage d'écran système",
-      "screenLockCompatHint": "À activer UNIQUEMENT si vous avez défini un verrouillage d'écran Android natif (PIN/mot de passe) sur cet appareil. FreeKiosk (1) s'efface alors pour l'écran de verrouillage sécurisé au démarrage au lieu de se verrouiller immédiatement — évitant le blocage au redémarrage causé par le conflit entre le kiosque et l'écran de verrouillage sécurisé — et (2) garde le keyguard système actif pendant l'épinglage, pour que le verrouillage d'écran demande effectivement le mot de passe après que l'écran s'éteint et se rallume (sans cela, le mode lock-task désactive le keyguard et le mot de passe n'apparaît jamais). Un verrouillage d'écran système signifie qu'une personne doit entrer le mot de passe sur l'appareil après chaque redémarrage avant que le kiosque ne démarre, et à chaque réveil — inadapté aux appareils sans surveillance. Pour la sécurité de l'appareil, le PIN de sortie FreeKiosk + Device Owner est généralement le meilleur choix.",
-      "screenLockCompatWarning": "Avec un verrouillage d'écran natif défini, l'appareil demandera le mot de passe manuellement après chaque redémarrage avant que FreeKiosk ne se lance. Ceci n'a aucun effet sauf si un verrouillage d'écran Android est réellement configuré.",
-      "defaultLauncher": "Définir FreeKiosk comme lanceur par défaut",
-      "defaultLauncherHintOwner": "Fait de FreeKiosk l'application d'accueil persistante via Device Owner. Le système relance alors FreeKiosk lui-même après chaque redémarrage et mise à jour système, sans dépendre des autorisations « Apparaître au-dessus » / Démarrage automatique du fabricant que certaines marques (ex. Samsung) réinitialisent lors des mises à jour OS — la cause principale du kiosque qui disparaît après un redémarrage/mise à jour. Le bouton Accueil revient aussi ici. Désactiver ceci restaure votre lanceur normal.",
-      "defaultLauncherHintNonOwner": "Ouvre le sélecteur d'application d'accueil système pour que vous puissiez définir FreeKiosk comme lanceur par défaut. Le système relance alors FreeKiosk au démarrage. Sans Device Owner, ce choix n'est pas verrouillé — l'utilisateur peut le changer et certaines marques peuvent le réinitialiser lors d'une mise à jour système (le Device Owner le rend permanent).",
-      "defaultLauncherWarningOwner": "FreeKiosk devient l'application d'accueil/lanceur de l'appareil. Si l'application venait à planter au lancement, il n'y a pas de lanceur de secours, donc testez sur un appareil avant un déploiement en flotte. Désactiver ceci (ou retirer le Device Owner) restaure le lanceur normal.",
-      "defaultLauncherWarningNonOwner": "Choisissez FreeKiosk dans l'écran de sélection d'application d'accueil qui s'ouvre. Ceci n'est pas imposé sans Device Owner et peut être réinitialisé par une mise à jour système. Pour le retirer plus tard, choisissez un autre lanceur dans le même écran système."
+      "screenLockCompatHint": "À activer UNIQUEMENT si vous avez défini un verrouillage d'écran Android natif (PIN/mot de passe) sur cet appareil. AapKiosk (1) s'efface alors pour l'écran de verrouillage sécurisé au démarrage au lieu de se verrouiller immédiatement — évitant le blocage au redémarrage causé par le conflit entre le kiosque et l'écran de verrouillage sécurisé — et (2) garde le keyguard système actif pendant l'épinglage, pour que le verrouillage d'écran demande effectivement le mot de passe après que l'écran s'éteint et se rallume (sans cela, le mode lock-task désactive le keyguard et le mot de passe n'apparaît jamais). Un verrouillage d'écran système signifie qu'une personne doit entrer le mot de passe sur l'appareil après chaque redémarrage avant que le kiosque ne démarre, et à chaque réveil — inadapté aux appareils sans surveillance. Pour la sécurité de l'appareil, le PIN de sortie AapKiosk + Device Owner est généralement le meilleur choix.",
+      "screenLockCompatWarning": "Avec un verrouillage d'écran natif défini, l'appareil demandera le mot de passe manuellement après chaque redémarrage avant que AapKiosk ne se lance. Ceci n'a aucun effet sauf si un verrouillage d'écran Android est réellement configuré.",
+      "defaultLauncher": "Définir AapKiosk comme lanceur par défaut",
+      "defaultLauncherHintOwner": "Fait de AapKiosk l'application d'accueil persistante via Device Owner. Le système relance alors AapKiosk lui-même après chaque redémarrage et mise à jour système, sans dépendre des autorisations « Apparaître au-dessus » / Démarrage automatique du fabricant que certaines marques (ex. Samsung) réinitialisent lors des mises à jour OS — la cause principale du kiosque qui disparaît après un redémarrage/mise à jour. Le bouton Accueil revient aussi ici. Désactiver ceci restaure votre lanceur normal.",
+      "defaultLauncherHintNonOwner": "Ouvre le sélecteur d'application d'accueil système pour que vous puissiez définir AapKiosk comme lanceur par défaut. Le système relance alors AapKiosk au démarrage. Sans Device Owner, ce choix n'est pas verrouillé — l'utilisateur peut le changer et certaines marques peuvent le réinitialiser lors d'une mise à jour système (le Device Owner le rend permanent).",
+      "defaultLauncherWarningOwner": "AapKiosk devient l'application d'accueil/lanceur de l'appareil. Si l'application venait à planter au lancement, il n'y a pas de lanceur de secours, donc testez sur un appareil avant un déploiement en flotte. Désactiver ceci (ou retirer le Device Owner) restaure le lanceur normal.",
+      "defaultLauncherWarningNonOwner": "Choisissez AapKiosk dans l'écran de sélection d'application d'accueil qui s'ouvre. Ceci n'est pas imposé sans Device Owner et peut être réinitialisé par une mise à jour système. Pour le retirer plus tard, choisissez un autre lanceur dans le même écran système."
     },
     "returnToSettings": {
       "title": "Retour aux réglages",
@@ -645,13 +645,13 @@
       "missingFieldsTitle": "Champs manquants",
       "missingFieldsMessage": "Veuillez saisir à la fois l'URL du cloud et le jeton d'enrôlement.",
       "enrollConfirmTitle": "Enrôlement dans la gestion cloud",
-      "enrollConfirmMessage": "L'enrôlement réinitialisera tous les réglages locaux de FreeKiosk. L'appareil sera ensuite configuré depuis le cloud.\n\nContinuer ?",
+      "enrollConfirmMessage": "L'enrôlement réinitialisera tous les réglages locaux de AapKiosk. L'appareil sera ensuite configuré depuis le cloud.\n\nContinuer ?",
       "cancel": "Annuler",
       "enroll": "Enrôler",
       "enrollmentFailedTitle": "Échec de l'enrôlement",
       "unknownError": "Erreur inconnue",
       "leaveConfirmTitle": "Quitter la gestion cloud",
-      "leaveConfirmMessage": "Ceci déconnectera l'appareil du cloud et effacera tous les réglages de FreeKiosk.\n\nContinuer ?",
+      "leaveConfirmMessage": "Ceci déconnectera l'appareil du cloud et effacera tous les réglages de AapKiosk.\n\nContinuer ?",
       "unenroll": "Désenrôler"
     },
     "updates": {
@@ -686,11 +686,11 @@
       "enabledNotConnected": "● Activé (non connecté)",
       "disabled": "○ Désactivé",
       "whyTitle": "Pourquoi est-ce nécessaire ?",
-      "whyInfo": "Le service d'accessibilité permet à FreeKiosk d'envoyer des entrées clavier (contrôle à distance, saisie de texte) aux applications externes.\n\nSans lui, l'émulation de clavier ne fonctionne que dans la WebView propre à FreeKiosk.",
+      "whyInfo": "Le service d'accessibilité permet à AapKiosk d'envoyer des entrées clavier (contrôle à distance, saisie de texte) aux applications externes.\n\nSans lui, l'émulation de clavier ne fonctionne que dans la WebView propre à AapKiosk.",
       "enableAuto": "Activer automatiquement (Device Owner)",
       "openSettings": "Ouvrir les réglages d'accessibilité",
       "hintOwner": "Le mode Device Owner peut activer le service automatiquement si l'autorisation WRITE_SECURE_SETTINGS a été accordée via ADB. Sinon, activez-le manuellement dans les réglages Android.",
-      "hintNonOwner": "Activez « FreeKiosk » dans Réglages → Accessibilité → Services installés.",
+      "hintNonOwner": "Activez « AapKiosk » dans Réglages → Accessibilité → Services installés.",
       "runningHint": "L'émulation de clavier est disponible pour toutes les applications (WebView + Applications externes).",
       "managedAppsTitle": "Accessibilité des applications gérées",
       "managedAppsInfo": "Vous pouvez autoriser les services d'accessibilité d'autres applications dans la section « Applications gérées » de l'onglet Général.\nActivez « Autoriser l'accessibilité » par application pour ajouter leurs services d'accessibilité à la liste blanche via Device Owner.",
@@ -706,7 +706,7 @@
       "title": "Réglages système Android",
       "hint": "Ouvrir les réglages Android natifs pour modifier le WiFi, le volume, l'affichage et plus.\nUtile quand votre appareil n'a pas de boutons de navigation physiques.",
       "kioskActiveTitle": "Mode kiosque actif",
-      "kioskActiveInfo": "Le mode kiosque sera temporairement suspendu pour ouvrir les réglages Android. Il se réactivera automatiquement à votre retour dans FreeKiosk.",
+      "kioskActiveInfo": "Le mode kiosque sera temporairement suspendu pour ouvrir les réglages Android. Il se réactivera automatiquement à votre retour dans AapKiosk.",
       "openSettings": "Ouvrir les réglages Android",
       "wifi": "WiFi",
       "sound": "Son",
@@ -721,7 +721,7 @@
       "removeDeviceOwner": "Retirer le Device Owner",
       "exitKioskMode": "Quitter le mode kiosque"
     },
-    "versionFooter": "FreeKiosk v{{version}}"
+    "versionFooter": "AapKiosk v{{version}} (FreeKiosk)"
   },
   "dashboard": {
     "iconModes": {
@@ -810,7 +810,7 @@
       "fileBrowsingAndroidOnly": "La navigation de fichiers n'est disponible que sur Android.",
       "selectedBackupDefault": "Sauvegarde sélectionnée",
       "invalidBackup": "Sauvegarde invalide",
-      "notValidBackup": "Le fichier sélectionné n'est pas une sauvegarde FreeKiosk valide.",
+      "notValidBackup": "Le fichier sélectionné n'est pas une sauvegarde AapKiosk valide.",
       "error": "Erreur",
       "browseFileFailed": "Échec de la navigation du fichier : {{error}}",
       "restoreConfigTitle": "Restaurer la configuration",
@@ -868,8 +868,8 @@
       "connect": "Connecter",
       "enterBrokerUrl": "Entrez l'URL du broker pour vous connecter",
       "dozeTitle": "L'optimisation de batterie est active",
-      "dozeText": "Android peut suspendre le réseau de FreeKiosk une fois la tablette inactive un moment, ce qui fait que le broker perd la connexion et que Home Assistant affiche l'appareil comme indisponible après quelques heures. Exempter FreeKiosk garde MQTT actif.",
-      "dozeExempt": "Exempter FreeKiosk",
+      "dozeText": "Android peut suspendre le réseau de AapKiosk une fois la tablette inactive un moment, ce qui fait que le broker perd la connexion et que Home Assistant affiche l'appareil comme indisponible après quelques heures. Exempter AapKiosk garde MQTT actif.",
+      "dozeExempt": "Exempter AapKiosk",
       "dozeAdbHint": "Si la boîte de dialogue n'apparaît pas, accordez-la via ADB à la place :",
       "brokerUrl": "URL du broker",
       "brokerUrlPlaceholder": "ex. 192.168.1.100",
@@ -900,7 +900,7 @@
       "passwordNotSavedMessage": "Le mot de passe MQTT n'a pas pu être écrit dans le stockage sécurisé de cet appareil : le broker refusera donc la connexion. Cela arrive sur les firmwares dont le Keystore Android est défaillant. Le champ est vidé pour ne pas afficher un mot de passe qui n'a jamais été enregistré.",
       "discoveryReconnectMessage": "Les entités Home Assistant sont publiées à la connexion. Reconnecter maintenant pour appliquer ce changement ?",
       "cameraPermissionTitle": "Autorisation caméra requise",
-      "cameraPermissionMessage": "FreeKiosk a besoin d'accéder à la caméra pour publier des photos en MQTT.",
+      "cameraPermissionMessage": "AapKiosk a besoin d'accéder à la caméra pour publier des photos en MQTT.",
       "publishScreenshot": "Publier une capture d'écran",
       "publishScreenshotHint": "Expose l'écran du kiosque dans Home Assistant comme entité image/caméra, avec un bouton de capture. L'écran est publié sur le broker, en clair sauf sur le port 8883, et toute personne qui peut lire le topic peut le voir.",
       "screenshotAuto": "Publication automatique des captures",
@@ -927,7 +927,7 @@
       "on": "activé",
       "off": "désactivé",
       "scanUnavailableTitle": "Recherche Wi-Fi indisponible",
-      "scanUnavailableDefault": "FreeKiosk n'a pas la permission de rechercher des réseaux Wi-Fi.",
+      "scanUnavailableDefault": "AapKiosk n'a pas la permission de rechercher des réseaux Wi-Fi.",
       "savedPasswordFailedTitle": "Échec du mot de passe Wi-Fi enregistré",
       "enterPasswordAgain": "Entrez à nouveau le mot de passe pour « {{ssid}} ».",
       "connectionFailedTitle": "Échec de la connexion",
@@ -1054,7 +1054,7 @@
       "haHint": "À utiliser avec l'intégration RESTful de Home Assistant. Voir la documentation pour des exemples de configuration.",
       "streamEndpoint": "/api/camera/stream - Flux MJPEG en direct",
       "cameraPermissionTitle": "Autorisation caméra requise",
-      "cameraPermissionStream": "FreeKiosk a besoin d'accéder à la caméra pour diffuser un flux en direct.",
+      "cameraPermissionStream": "AapKiosk a besoin d'accéder à la caméra pour diffuser un flux en direct.",
       "cameraRotation": "Rotation de la caméra",
       "cameraRotationHint": "S'applique aux photos (REST et MQTT) et au flux en direct. -1 la déduit du capteur. Utilisez 0, 90, 180 ou 270 si l'image sort de travers. Une requête peut la remplacer avec ?rotate=.",
       "stream": "Flux caméra en direct",
@@ -1271,7 +1271,7 @@
       "running": "L'application externe est en cours d'exécution",
       "waiting": "En attente de l'application...",
       "testModeTitle": "Mode test actif",
-      "testModeText": "Vous pouvez utiliser le bouton retour Android pour revenir à FreeKiosk.",
+      "testModeText": "Vous pouvez utiliser le bouton retour Android pour revenir à AapKiosk.",
       "returnToApp": "Retourner à l'application",
       "settings": "Réglages",
       "hint": "Astuce : dans l'application externe, appuyez 5× sur le bouton secret pour revenir ici (position configurable)"
@@ -1304,7 +1304,7 @@
         },
         "usage": {
           "label": "Accès à l'utilisation",
-          "description": "Permet à FreeKiosk de détecter et relancer l'application au premier plan en mode application externe."
+          "description": "Permet à AapKiosk de détecter et relancer l'application au premier plan en mode application externe."
         },
         "battery": {
           "label": "Ignorer l'optimisation de la batterie",
@@ -1396,7 +1396,7 @@
       "noOrigins": "Aucune origine autorisée",
       "noOriginsHint": "Aucune page ne peut imprimer tant que vous n'en ajoutez pas une",
       "printTestPage": "Imprimer une page de test",
-      "info": "Les pages web impriment sans dialogue en appelant window.FreeKiosk.silentPrinter.print() ou printImage(). print() met la page en forme pour qu'un pixel CSS corresponde à un point.\n\nPar défaut, window.print() ouvre la boîte de dialogue d'impression Android quand l'impression de la page est activée, et ne fait rien sinon. Avec « Envoyer window.print() vers cette imprimante » activé, il imprime sans dialogue sur l'imprimante ESC/POS à la place.\n\nPour un accès qui survit aux redémarrages : branchez l'imprimante, choisissez FreeKiosk et cochez l'option qui l'ouvre toujours pour cet appareil. Le bouton ci-dessus n'accorde l'accès que jusqu'au débranchement de l'imprimante, et le mode kiosque verrouillé masque complètement cette boîte de dialogue.\n\nLes imprimantes qui exposent une interface USB propre au fabricant au lieu de la classe imprimante standard impriment quand même, mais ne peuvent pas indiquer le niveau de papier."
+      "info": "Les pages web impriment sans dialogue en appelant window.FreeKiosk.silentPrinter.print() ou printImage(). print() met la page en forme pour qu'un pixel CSS corresponde à un point.\n\nPar défaut, window.print() ouvre la boîte de dialogue d'impression Android quand l'impression de la page est activée, et ne fait rien sinon. Avec « Envoyer window.print() vers cette imprimante » activé, il imprime sans dialogue sur l'imprimante ESC/POS à la place.\n\nPour un accès qui survit aux redémarrages : branchez l'imprimante, choisissez AapKiosk et cochez l'option qui l'ouvre toujours pour cet appareil. Le bouton ci-dessus n'accorde l'accès que jusqu'au débranchement de l'imprimante, et le mode kiosque verrouillé masque complètement cette boîte de dialogue.\n\nLes imprimantes qui exposent une interface USB propre au fabricant au lieu de la classe imprimante standard impriment quand même, mais ne peuvent pas indiquer le niveau de papier."
     }
   },
   "screens": {
@@ -1464,13 +1464,13 @@
       "checkUpdateFailed": "Impossible de vérifier les mises à jour : {{error}}",
       "downloadUrlUnavailable": "URL de téléchargement non disponible.",
       "permissionRequiredTitle": "Autorisation requise",
-      "permissionRequiredMessage": "FreeKiosk a besoin d'une autorisation pour installer les mises à jour.\n\nVeuillez activer « Autoriser depuis cette source » sur l'écran suivant, puis revenez réessayer la mise à jour.",
+      "permissionRequiredMessage": "AapKiosk a besoin d'une autorisation pour installer les mises à jour.\n\nVeuillez activer « Autoriser depuis cette source » sur l'écran suivant, puis revenez réessayer la mise à jour.",
       "settingsUnavailableTitle": "Réglages indisponibles",
       "settingsUnavailableMessage": "Cet appareil ne permet pas d'activer les installations d'applications depuis les réglages.\n\nAlternative : connectez-vous via ADB et exécutez :\nadb install -r FreeKiosk-<version>.apk",
       "updateReadyTitle": "Mise à jour prête",
       "updateReadyMessage": "La mise à jour a été téléchargée avec succès. L'écran d'installation devrait apparaître sous peu.\n\nSi rien ne se passe :\n• Vérifiez le panneau de notifications\n• Recherchez « Installateur de paquets »\n• Accordez l'autorisation d'installation si demandé",
       "installPermissionNeededTitle": "Autorisation d'installation requise",
-      "installPermissionNeededMessage": "La mise à jour a été téléchargée mais ne peut pas être installée.\n\nVeuillez activer « Installer depuis des sources inconnues » pour FreeKiosk dans les réglages de votre appareil, puis réessayez.\n\nSur les appareils restreints (ex. Echo Show), utilisez :\nadb install -r <apk>",
+      "installPermissionNeededMessage": "La mise à jour a été téléchargée mais ne peut pas être installée.\n\nVeuillez activer « Installer depuis des sources inconnues » pour AapKiosk dans les réglages de votre appareil, puis réessayez.\n\nSur les appareils restreints (ex. Echo Show), utilisez :\nadb install -r <apk>",
       "downloadFailed": "Échec du téléchargement :\n\n{{error}}",
       "enterUrl": "Veuillez saisir une URL",
       "addMediaItem": "Veuillez ajouter au moins un média (URL de vidéo ou d'image)",
@@ -1515,7 +1515,7 @@
       "removeDeviceOwnerTitle": "Retirer le Device Owner",
       "removeDeviceOwnerMessage": "ATTENTION : Ceci retirera les privilèges Device Owner.\n\nVous perdrez :\n• Le mode kiosque complet\n• Le blocage de navigation\n• La protection par verrouillage\n\nTous les réglages seront réinitialisés.\n\nContinuer ?",
       "remove": "Retirer",
-      "deviceOwnerRemovedMessage": "Device Owner retiré !\n\nVous pouvez maintenant désinstaller FreeKiosk normalement.",
+      "deviceOwnerRemovedMessage": "Device Owner retiré !\n\nVous pouvez maintenant désinstaller AapKiosk normalement.",
       "failedMessage": "Échec : {{error}}",
       "removeCertificateTitle": "Supprimer le certificat",
       "removeCertificateMessage": "Supprimer le certificat accepté pour :\n\n{{url}}\n\nVous devrez l'accepter à nouveau lors de votre prochaine visite.",
@@ -1545,11 +1545,11 @@
       "fileAccessOffTitle": "Accès aux fichiers désactivé",
       "fileAccessOffMessage": "Pour ouvrir un fichier local, activez d'abord Général > Lecteur PDF > Lecteur PDF intégré. C'est ce réglage qui donne au navigateur l'accès aux fichiers de l'appareil.",
       "allFilesNeededTitle": "L'accès à tous les fichiers est nécessaire",
-      "allFilesNeededMessage": "Ce fichier est en dehors du dossier de FreeKiosk. Sur l'écran suivant, autorisez FreeKiosk à accéder à tous les fichiers, puis revenez et enregistrez à nouveau.",
+      "allFilesNeededMessage": "Ce fichier est en dehors du dossier de AapKiosk. Sur l'écran suivant, autorisez AapKiosk à accéder à tous les fichiers, puis revenez et enregistrez à nouveau.",
       "allFilesOpenSettings": "Ouvrir les réglages",
       "allFilesCancel": "Annuler",
-      "allFilesUnavailableTitle": "Fichier hors du dossier de FreeKiosk",
-      "allFilesUnavailableMessage": "Cette version de FreeKiosk ne peut pas lire de fichiers hors de son propre dossier. Copiez le fichier dans Android/data/com.freekiosk/files/ sur l'appareil, ou choisissez-le avec « Choisir un fichier HTML local ».",
+      "allFilesUnavailableTitle": "Fichier hors du dossier de AapKiosk",
+      "allFilesUnavailableMessage": "Cette version de AapKiosk ne peut pas lire de fichiers hors de son propre dossier. Copiez le fichier dans Android/data/com.freekiosk/files/ sur l'appareil, ou choisissez-le avec « Choisir un fichier HTML local ».",
       "passwordNotSavedTitle": "Mot de passe non enregistré",
       "basicAuthNotSavedMessage": "Le mot de passe HTTP Basic Auth n'a pas pu être écrit dans le stockage sécurisé de cet appareil. Tous les autres réglages de cet écran ont été enregistrés. Cela arrive sur les firmwares dont le Keystore Android est défaillant.",
       "downloadProgress": "{{percent}} % ({{done}} / {{total}} Mo)",

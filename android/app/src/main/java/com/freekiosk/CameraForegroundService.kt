@@ -118,7 +118,7 @@ class CameraForegroundService : Service() {
 
     private fun buildNotification(): Notification {
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("FreeKiosk")
+            .setContentTitle("AapKiosk")
             .setContentText("Remote camera available")
             .setSmallIcon(R.mipmap.ic_launcher)
             .setPriority(NotificationCompat.PRIORITY_MIN)

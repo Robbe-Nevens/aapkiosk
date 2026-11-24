@@ -13,6 +13,8 @@ jest.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 jest.mock('../src/components/Icon', () => 'Icon');
+// AapKiosk ships with Cloud off; the banner itself is still tested with it on
+jest.mock('../src/config/features', () => ({ CLOUD_ENABLED: true }));
 jest.mock('../src/utils/CloudSyncService', () => ({
   CloudSyncService: { isEnrolled: () => mockIsEnrolled() },
 }));

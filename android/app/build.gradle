@@ -86,7 +86,10 @@ if (project.hasProperty('playstore') && project.hasProperty('cloudprovi')) {
     )
 }
 
-def enableSelfUpdate = !project.hasProperty('playstore')
+// AapKiosk: self-update off. The updater downloads the upstream FreeKiosk APK from
+// rushb-fr/freekiosk, which would replace the Den Aap branding (and is signed with a
+// different key, so the install would fail anyway). Update by building a new AapKiosk APK.
+def enableSelfUpdate = false
 def enableAccessibilityService = !project.hasProperty('playstore') && !project.hasProperty('cloudprovi')
 // Camera-type foreground service for the remote camera behind another app: Play reviews that type.
 def enableCameraForegroundService = !project.hasProperty('playstore')
@@ -195,6 +198,9 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            // AapKiosk: the dev build installs next to the release kiosk instead of replacing it
+            // (different signing key). Its launcher name comes from src/debug/res/values/strings.xml.
+            applicationIdSuffix ".debug"
         }
         release {
             signingConfig signingConfigs.release

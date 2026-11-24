@@ -1,7 +1,7 @@
 {
   "common": {},
   "general": {
-    "externalAppTvWarning": "On a TV, nothing reaches FreeKiosk while another app is in front, so the remote cannot bring you back to these settings. Use FreeKiosk Cloud, MQTT, the REST API or adb to change them.",
+    "externalAppTvWarning": "On a TV, nothing reaches AapKiosk while another app is in front, so the remote cannot bring you back to these settings. Use FreeKiosk Cloud, MQTT, the REST API or adb to change them.",
     "appearance": {
       "title": "Multi-App appearance",
       "background": "Background colour",
@@ -116,7 +116,7 @@
       "password": "Password",
       "passwordPlaceholder": "Password",
       "passwordHint": "Stored in the device Keychain (not in plain text)",
-      "info": "When a website returns a 401 Unauthorized response, FreeKiosk will automatically reply with these credentials. Leave username empty to disable."
+      "info": "When a website returns a 401 Unauthorized response, AapKiosk will automatically reply with these credentials. Leave username empty to disable."
     },
     "urlRotation": {
       "title": "URL Rotation",
@@ -169,9 +169,9 @@
     },
     "usageStats": {
       "granted": "Usage Access Granted",
-      "grantedHint": "Auto-relaunch monitoring is active. FreeKiosk can detect when the external app closes.",
+      "grantedHint": "Auto-relaunch monitoring is active. AapKiosk can detect when the external app closes.",
       "required": "Usage Access Required",
-      "requiredHint": "Required for auto-relaunch. Without this, FreeKiosk cannot detect when the external app closes or crashes.",
+      "requiredHint": "Required for auto-relaunch. Without this, AapKiosk cannot detect when the external app closes or crashes.",
       "grantButton": "Grant Usage Access"
     },
     "password": {
@@ -262,9 +262,9 @@
     "brightness": {
       "title": "Brightness Control",
       "appControl": "App Brightness Control",
-      "hintManaged": "FreeKiosk manages screen brightness",
+      "hintManaged": "AapKiosk manages screen brightness",
       "hintSystem": "System manages brightness (Tasker, Android settings, etc.)",
-      "systemInfo": "Brightness is managed by the system. External tools like Tasker can control brightness without interference from FreeKiosk."
+      "systemInfo": "Brightness is managed by the system. External tools like Tasker can control brightness without interference from AapKiosk."
     },
     "manualBrightness": {
       "title": "Manual Brightness",
@@ -355,14 +355,14 @@
       "proximityInfo": "Short range (a few centimeters): wave a hand right in front of the screen to wake it. Unlike camera motion, it never triggers on lighting changes and uses almost no battery.",
       "howItWorksTitle": "How It Works",
       "howItWorksAfter": "• After {{delay}} minute(s) without interaction, the screensaver activates",
-      "howItWorksExternalApp": "• FreeKiosk comes to the foreground to show the screensaver; the external app resumes on wake",
+      "howItWorksExternalApp": "• AapKiosk comes to the foreground to show the screensaver; the external app resumes on wake",
       "howItWorksTouch": "• Touch the screen to wake the device",
       "howItWorksMotion": "• Motion in front of the camera also wakes the screen",
       "howItWorksProximity": "• A hand close to the proximity sensor also wakes the screen",
       "howItWorksBrightness": "• Normal brightness is restored automatically",
       "howItWorksDimOverApp": "• The screen dims over the external app, which stays open; the first tap wakes it",
       "keepExternalApp": "Keep the app in front",
-      "keepExternalAppHint": "Dim over the external app instead of switching back to FreeKiosk, so it does not reload on wake. The first tap only wakes the screen. Motion and proximity wake are not available with this option."
+      "keepExternalAppHint": "Dim over the external app instead of switching back to AapKiosk, so it does not reload on wake. The first tap only wakes the screen. Motion and proximity wake are not available with this option."
     },
     "screenSchedule": {
       "title": "Screen Sleep Schedule",
@@ -450,11 +450,11 @@
       "pausePage": "Pause the page while the screen is off",
       "pausePageHint": "Stops the page's own activity (timers, image fetching) while the screen is really off (screen-off command, lock, power button, schedule), so a slideshow does not keep downloading. It runs again when the screen turns on. Off by default: a dashboard that must keep updating should leave it off.",
       "intercom": "2-way audio (intercom) mode",
-      "intercomHint": "Enable for WebRTC 2-way audio / talk-back (e.g. a Home Assistant / go2rtc doorbell intercom card). While the web page is actively using the microphone, FreeKiosk switches the device to communication audio mode so the microphone back-channel transmits, then restores normal audio when you stop talking. Leave off for normal browsing — it only engages while the mic is in use."
+      "intercomHint": "Enable for WebRTC 2-way audio / talk-back (e.g. a Home Assistant / go2rtc doorbell intercom card). While the web page is actively using the microphone, AapKiosk switches the device to communication audio mode so the microphone back-channel transmits, then restores normal audio when you stop talking. Leave off for normal browsing — it only engages while the mic is in use."
     },
     "orientation": {
       "title": "Screen Orientation",
-      "hint": "Lock FreeKiosk's screen to one orientation, or follow the device. Not applied to an external app.",
+      "hint": "Lock AapKiosk's screen to one orientation, or follow the device. Not applied to an external app.",
       "auto": "Follow the device",
       "portrait": "Portrait",
       "landscape": "Landscape",
@@ -481,7 +481,7 @@
       "enableHint": "Prevent users from exiting the kiosk app. Requires PIN code to exit.",
       "disabledWarning": "With Lock Mode disabled, users can exit the app normally",
       "screenPinningInfo": "Screen pinning enabled: Only 5-tap gesture + PIN code allows exit",
-      "noDeviceOwnerWarning": "Without Device Owner, users can exit via Back + Recent Apps gesture. Set FreeKiosk as Device Owner for complete lockdown.",
+      "noDeviceOwnerWarning": "Without Device Owner, users can exit via Back + Recent Apps gesture. Set AapKiosk as Device Owner for complete lockdown.",
       "externalAppNoOwnerError": "Device Owner required: Lock Mode will not work in External App mode without Device Owner privileges.",
       "externalAppOwnerInfo": "Lock Mode enabled: Only 5-tap anywhere on screen + PIN code allows exit from external app",
       "blockPowerMenu": "Block Power Menu",
@@ -493,7 +493,7 @@
       "blockFactoryReset": "Block Factory Reset",
       "blockFactoryResetHint": "Removes the 'Factory reset' option from the system Settings app (Device Owner restriction). Useful when the Settings app is on your multi-app whitelist, so locked users can't wipe the device. Persists across reboots. Takes effect immediately, even outside Lock Mode.",
       "allowRemoteScreenshots": "Allow Remote Screenshots",
-      "allowRemoteScreenshotsHint": "Lock Mode blocks screen capture device-wide (Power+Volume Down), which also blocks the REST /api/screenshot and cloud screenshot commands from capturing an app other than FreeKiosk (multi-app mode). Enable this to let FreeKiosk lift that block for the fraction of a second a remote capture takes, then restore it. Requires the FreeKiosk accessibility service and Android 11+.",
+      "allowRemoteScreenshotsHint": "Lock Mode blocks screen capture device-wide (Power+Volume Down), which also blocks the REST /api/screenshot and cloud screenshot commands from capturing an app other than AapKiosk (multi-app mode). Enable this to let AapKiosk lift that block for the fraction of a second a remote capture takes, then restore it. Requires the AapKiosk accessibility service and Android 11+.",
       "remoteScreenshotWarning": "While a remote screenshot is being taken, the hardware screenshot combo is briefly available to anyone in front of the device.",
       "allowHardwareScreenshots": "Allow Screenshots With Hardware Buttons",
       "allowHardwareScreenshotsHint": "Lock Mode blocks the Power+Volume Down screenshot combo for everyone using the device. Enable this to allow it again while Lock Mode is on. Anyone in front of the device can then capture the screen. Takes effect the next time Lock Mode starts.",
@@ -504,19 +504,19 @@
     "autoLaunch": {
       "title": "Auto Launch",
       "launchOnBoot": "Launch on Boot",
-      "launchOnBootHint": "Automatically launch FreeKiosk when the device starts",
+      "launchOnBootHint": "Automatically launch AapKiosk when the device starts",
       "appearOnTopInfo": "Make sure \"Appear on top\" permission is enabled in system settings for reliable auto-launch.",
-      "tvBootBlocked": "Without \"Display over other apps\", Android stops FreeKiosk from starting at boot on this TV: after a power cut, the TV home screen stays and nothing plays. This TV has no screen to grant it from. From a computer, once:",
-      "tvBootGranted": "\"Display over other apps\" is granted: FreeKiosk can start at boot.",
+      "tvBootBlocked": "Without \"Display over other apps\", Android stops AapKiosk from starting at boot on this TV: after a power cut, the TV home screen stays and nothing plays. This TV has no screen to grant it from. From a computer, once:",
+      "tvBootGranted": "\"Display over other apps\" is granted: AapKiosk can start at boot.",
       "openSystemSettings": "Open System Settings",
       "screenLockCompat": "System screen-lock compatibility",
-      "screenLockCompatHint": "Enable ONLY if you set a native Android screen-lock (PIN/password) on this device. FreeKiosk then (1) steps aside for the secure lock screen at boot instead of locking immediately — preventing the reboot freeze caused by the conflict between the kiosk and the secure lock screen — and (2) keeps the system keyguard active while pinned, so the screen-lock actually prompts after the screen turns off and back on (without this, lock-task mode disables the keyguard and the password never appears). A system screen-lock means someone must enter the password on the device after every reboot before the kiosk starts, and on every wake — unsuitable for unattended devices. For device security, the FreeKiosk exit PIN + Device Owner is usually the better choice.",
-      "screenLockCompatWarning": "With a native screen-lock set, the device will require the password to be entered manually after every reboot before FreeKiosk launches. This has no effect unless an Android screen-lock is actually configured.",
-      "defaultLauncher": "Set FreeKiosk as default launcher",
-      "defaultLauncherHintOwner": "Makes FreeKiosk the persistent Home app via Device Owner. The system then relaunches FreeKiosk by itself after every reboot and system update, without relying on the OEM 'Appear on top' / Autostart permissions that some brands (e.g. Samsung) reset on OS updates — the main cause of the kiosk dropping out after a reboot/update. The Home button also returns here. Turning this off restores your normal launcher.",
-      "defaultLauncherHintNonOwner": "Opens the system Home-app picker so you can set FreeKiosk as the default launcher. The system then relaunches FreeKiosk at boot. Without Device Owner this choice is not locked — the user can change it back and some brands may reset it on a system update (Device Owner makes it permanent).",
-      "defaultLauncherWarningOwner": "FreeKiosk becomes the device Home/launcher. If the app were to crash on launch there is no fallback launcher, so test on one device before fleet rollout. Disabling this (or removing Device Owner) restores the normal launcher.",
-      "defaultLauncherWarningNonOwner": "Pick FreeKiosk in the Home-app screen that opens. This is not enforced without Device Owner and may be reset by a system update. To remove it later, choose another launcher in the same system screen."
+      "screenLockCompatHint": "Enable ONLY if you set a native Android screen-lock (PIN/password) on this device. AapKiosk then (1) steps aside for the secure lock screen at boot instead of locking immediately — preventing the reboot freeze caused by the conflict between the kiosk and the secure lock screen — and (2) keeps the system keyguard active while pinned, so the screen-lock actually prompts after the screen turns off and back on (without this, lock-task mode disables the keyguard and the password never appears). A system screen-lock means someone must enter the password on the device after every reboot before the kiosk starts, and on every wake — unsuitable for unattended devices. For device security, the AapKiosk exit PIN + Device Owner is usually the better choice.",
+      "screenLockCompatWarning": "With a native screen-lock set, the device will require the password to be entered manually after every reboot before AapKiosk launches. This has no effect unless an Android screen-lock is actually configured.",
+      "defaultLauncher": "Set AapKiosk as default launcher",
+      "defaultLauncherHintOwner": "Makes AapKiosk the persistent Home app via Device Owner. The system then relaunches AapKiosk by itself after every reboot and system update, without relying on the OEM 'Appear on top' / Autostart permissions that some brands (e.g. Samsung) reset on OS updates — the main cause of the kiosk dropping out after a reboot/update. The Home button also returns here. Turning this off restores your normal launcher.",
+      "defaultLauncherHintNonOwner": "Opens the system Home-app picker so you can set AapKiosk as the default launcher. The system then relaunches AapKiosk at boot. Without Device Owner this choice is not locked — the user can change it back and some brands may reset it on a system update (Device Owner makes it permanent).",
+      "defaultLauncherWarningOwner": "AapKiosk becomes the device Home/launcher. If the app were to crash on launch there is no fallback launcher, so test on one device before fleet rollout. Disabling this (or removing Device Owner) restores the normal launcher.",
+      "defaultLauncherWarningNonOwner": "Pick AapKiosk in the Home-app screen that opens. This is not enforced without Device Owner and may be reset by a system update. To remove it later, choose another launcher in the same system screen."
     },
     "returnToSettings": {
       "title": "Return to Settings",
@@ -645,13 +645,13 @@
       "missingFieldsTitle": "Missing fields",
       "missingFieldsMessage": "Please enter both the cloud URL and the enrollment token.",
       "enrollConfirmTitle": "Enroll in Cloud Management",
-      "enrollConfirmMessage": "Enrolling will reset all local FreeKiosk settings. The device will then be configured from the cloud.\n\nContinue?",
+      "enrollConfirmMessage": "Enrolling will reset all local AapKiosk settings. The device will then be configured from the cloud.\n\nContinue?",
       "cancel": "Cancel",
       "enroll": "Enroll",
       "enrollmentFailedTitle": "Enrollment failed",
       "unknownError": "Unknown error",
       "leaveConfirmTitle": "Leave Cloud Management",
-      "leaveConfirmMessage": "This will disconnect the device from the cloud and wipe all FreeKiosk settings.\n\nContinue?",
+      "leaveConfirmMessage": "This will disconnect the device from the cloud and wipe all AapKiosk settings.\n\nContinue?",
       "unenroll": "Unenroll"
     },
     "updates": {
@@ -686,11 +686,11 @@
       "enabledNotConnected": "● Enabled (not connected)",
       "disabled": "○ Disabled",
       "whyTitle": "Why is this needed?",
-      "whyInfo": "The Accessibility Service allows FreeKiosk to send keyboard input (remote control, text input) to external apps.\n\nWithout it, keyboard emulation only works inside FreeKiosk's own WebView.",
+      "whyInfo": "The Accessibility Service allows AapKiosk to send keyboard input (remote control, text input) to external apps.\n\nWithout it, keyboard emulation only works inside AapKiosk's own WebView.",
       "enableAuto": "Enable Automatically (Device Owner)",
       "openSettings": "Open Accessibility Settings",
       "hintOwner": "Device Owner mode can enable the service automatically if the WRITE_SECURE_SETTINGS permission has been granted via ADB. Otherwise, enable it manually in Android settings.",
-      "hintNonOwner": "Enable \"FreeKiosk\" in Settings → Accessibility → Installed Services.",
+      "hintNonOwner": "Enable \"AapKiosk\" in Settings → Accessibility → Installed Services.",
       "runningHint": "Keyboard emulation is available for all apps (WebView + External Apps).",
       "managedAppsTitle": "Managed Apps Accessibility",
       "managedAppsInfo": "You can allow other apps' accessibility services in the \"Managed Apps\" section of the General tab.\nToggle \"Allow Accessibility\" per app to whitelist their accessibility services via Device Owner.",
@@ -706,7 +706,7 @@
       "title": "Android System Settings",
       "hint": "Open native Android settings to change WiFi, volume, display and more.\nUseful when your device has no physical navigation buttons.",
       "kioskActiveTitle": "Kiosk Mode Active",
-      "kioskActiveInfo": "Kiosk mode will be temporarily paused to open Android settings. It will automatically re-engage when you return to FreeKiosk.",
+      "kioskActiveInfo": "Kiosk mode will be temporarily paused to open Android settings. It will automatically re-engage when you return to AapKiosk.",
       "openSettings": "Open Android Settings",
       "wifi": "WiFi",
       "sound": "Sound",
@@ -721,7 +721,7 @@
       "removeDeviceOwner": "Remove Device Owner",
       "exitKioskMode": "Exit Kiosk Mode"
     },
-    "versionFooter": "FreeKiosk v{{version}}"
+    "versionFooter": "AapKiosk v{{version}} (FreeKiosk)"
   },
   "dashboard": {
     "iconModes": {
@@ -810,7 +810,7 @@
       "fileBrowsingAndroidOnly": "File browsing is only available on Android.",
       "selectedBackupDefault": "Selected backup",
       "invalidBackup": "Invalid Backup",
-      "notValidBackup": "The selected file is not a valid FreeKiosk backup.",
+      "notValidBackup": "The selected file is not a valid AapKiosk backup.",
       "error": "Error",
       "browseFileFailed": "Failed to browse file: {{error}}",
       "restoreConfigTitle": "Restore Configuration",
@@ -868,8 +868,8 @@
       "connect": "Connect",
       "enterBrokerUrl": "Enter broker URL to connect",
       "dozeTitle": "Battery optimization is active",
-      "dozeText": "Android may suspend FreeKiosk's network once the tablet has been idle for a while, so the broker drops the connection and Home Assistant shows the device as unavailable after a couple of hours. Exempting FreeKiosk keeps MQTT alive.",
-      "dozeExempt": "Exempt FreeKiosk",
+      "dozeText": "Android may suspend AapKiosk's network once the tablet has been idle for a while, so the broker drops the connection and Home Assistant shows the device as unavailable after a couple of hours. Exempting AapKiosk keeps MQTT alive.",
+      "dozeExempt": "Exempt AapKiosk",
       "dozeAdbHint": "If the dialog does not appear, grant it over ADB instead:",
       "brokerUrl": "Broker URL",
       "brokerUrlPlaceholder": "e.g. 192.168.1.100",
@@ -900,7 +900,7 @@
       "passwordNotSavedMessage": "The MQTT password could not be written to secure storage on this device, so the broker will refuse the connection. This happens on firmwares whose Android Keystore is broken. The field is cleared so it does not show a password that was never stored.",
       "discoveryReconnectMessage": "Home Assistant entities are published when connecting. Reconnect now to apply this change?",
       "cameraPermissionTitle": "Camera Permission Required",
-      "cameraPermissionMessage": "FreeKiosk needs camera access to publish camera snapshots over MQTT.",
+      "cameraPermissionMessage": "AapKiosk needs camera access to publish camera snapshots over MQTT.",
       "publishScreenshot": "Publish Screenshot",
       "publishScreenshotHint": "Expose the kiosk screen in Home Assistant as an image/camera entity, with a capture button. The screen is published to the broker, in clear text unless the port is 8883, and anyone who can read the topic can see it.",
       "screenshotAuto": "Screenshot Auto-publish",
@@ -927,7 +927,7 @@
       "on": "on",
       "off": "off",
       "scanUnavailableTitle": "Wi-Fi scan unavailable",
-      "scanUnavailableDefault": "FreeKiosk does not have permission to scan for Wi-Fi networks.",
+      "scanUnavailableDefault": "AapKiosk does not have permission to scan for Wi-Fi networks.",
       "savedPasswordFailedTitle": "Saved Wi-Fi password failed",
       "enterPasswordAgain": "Enter the password for \"{{ssid}}\" again.",
       "connectionFailedTitle": "Connection failed",
@@ -1054,7 +1054,7 @@
       "haHint": "Use with Home Assistant's RESTful integration. See documentation for configuration examples.",
       "streamEndpoint": "/api/camera/stream - Live MJPEG stream",
       "cameraPermissionTitle": "Camera Permission Required",
-      "cameraPermissionStream": "FreeKiosk needs camera access to serve a live stream.",
+      "cameraPermissionStream": "AapKiosk needs camera access to serve a live stream.",
       "cameraRotation": "Camera Rotation",
       "cameraRotationHint": "Applies to camera photos (REST and MQTT) and the live stream. -1 derives it from the sensor. Use 0, 90, 180 or 270 if the picture comes out sideways. A request can override it with ?rotate=.",
       "stream": "Live Camera Stream",
@@ -1271,7 +1271,7 @@
       "running": "External application is running",
       "waiting": "Waiting for application...",
       "testModeTitle": "Test Mode Active",
-      "testModeText": "You can use the Android back button to return to FreeKiosk.",
+      "testModeText": "You can use the Android back button to return to AapKiosk.",
       "returnToApp": "Return to Application",
       "settings": "Settings",
       "hint": "Tip: While in the external app, tap 5× on the secret button to return here (position configurable)"
@@ -1304,7 +1304,7 @@
         },
         "usage": {
           "label": "Usage access",
-          "description": "Lets FreeKiosk detect and relaunch the foreground app in external-app mode."
+          "description": "Lets AapKiosk detect and relaunch the foreground app in external-app mode."
         },
         "battery": {
           "label": "Ignore battery optimizations",
@@ -1396,7 +1396,13 @@
       "noOrigins": "No origins allowed",
       "noOriginsHint": "No page can print until you add one",
       "printTestPage": "Print test page",
-      "info": "Web pages print silently by calling window.FreeKiosk.silentPrinter.print() or printImage(). print() lays the page out so one CSS pixel is one dot.\n\nBy default, window.print() opens the Android print dialog when Window Printing is enabled, and does nothing otherwise. With \"Send window.print() to this printer\" on, it prints with no dialog on the ESC/POS printer instead.\n\nFor access that survives reboots: plug the printer in, then choose FreeKiosk and tick \"Always open\". The button above only grants access until the printer is unplugged, and lock task mode suppresses that dialog entirely.\n\nPrinters exposing a vendor-specific USB interface instead of the standard printer class still print, but cannot report paper level."
+      "info": "Web pages print silently by calling window.FreeKiosk.silentPrinter.print() or printImage(). print() lays the page out so one CSS pixel is one dot.\n\nBy default, window.print() opens the Android print dialog when Window Printing is enabled, and does nothing otherwise. With \"Send window.print() to this printer\" on, it prints with no dialog on the ESC/POS printer instead.\n\nFor access that survives reboots: plug the printer in, then choose AapKiosk and tick \"Always open\". The button above only grants access until the printer is unplugged, and lock task mode suppresses that dialog entirely.\n\nPrinters exposing a vendor-specific USB interface instead of the standard printer class still print, but cannot report paper level."
+    },
+    "manuals": {
+      "title": "Manuals",
+      "back": "Back",
+      "close": "Close",
+      "empty": "There are no manuals yet."
     }
   },
   "screens": {
@@ -1464,13 +1470,13 @@
       "checkUpdateFailed": "Unable to check for updates: {{error}}",
       "downloadUrlUnavailable": "Download URL not available.",
       "permissionRequiredTitle": "Permission Required",
-      "permissionRequiredMessage": "FreeKiosk needs permission to install updates.\n\nPlease enable \"Allow from this source\" on the next screen, then come back and try the update again.",
+      "permissionRequiredMessage": "AapKiosk needs permission to install updates.\n\nPlease enable \"Allow from this source\" on the next screen, then come back and try the update again.",
       "settingsUnavailableTitle": "Settings Unavailable",
       "settingsUnavailableMessage": "This device does not support enabling app installs from settings.\n\nAlternative: connect via ADB and run:\nadb install -r FreeKiosk-<version>.apk",
       "updateReadyTitle": "Update Ready",
       "updateReadyMessage": "The update has been downloaded successfully. The installation screen should appear shortly.\n\nIf nothing happens:\n• Check notification panel\n• Look for \"Package installer\"\n• Grant installation permission if prompted",
       "installPermissionNeededTitle": "Install Permission Needed",
-      "installPermissionNeededMessage": "The update was downloaded but cannot be installed.\n\nPlease enable \"Install from unknown sources\" for FreeKiosk in your device settings, then try again.\n\nOn restricted devices (e.g. Echo Show), use:\nadb install -r <apk>",
+      "installPermissionNeededMessage": "The update was downloaded but cannot be installed.\n\nPlease enable \"Install from unknown sources\" for AapKiosk in your device settings, then try again.\n\nOn restricted devices (e.g. Echo Show), use:\nadb install -r <apk>",
       "downloadFailed": "Download failed:\n\n{{error}}",
       "enterUrl": "Please enter a URL",
       "addMediaItem": "Please add at least one media item (video or image URL)",
@@ -1515,7 +1521,7 @@
       "removeDeviceOwnerTitle": "Remove Device Owner",
       "removeDeviceOwnerMessage": "WARNING: This will remove Device Owner privileges.\n\nYou will lose:\n• Full kiosk mode\n• Navigation blocking\n• Lock protection\n\nAll settings will be reset.\n\nContinue?",
       "remove": "Remove",
-      "deviceOwnerRemovedMessage": "Device Owner removed!\n\nYou can now uninstall FreeKiosk normally.",
+      "deviceOwnerRemovedMessage": "Device Owner removed!\n\nYou can now uninstall AapKiosk normally.",
       "failedMessage": "Failed: {{error}}",
       "removeCertificateTitle": "Remove Certificate",
       "removeCertificateMessage": "Remove the accepted certificate for:\n\n{{url}}\n\nYou will need to accept it again on your next visit.",
@@ -1545,11 +1551,11 @@
       "fileAccessOffTitle": "File access is off",
       "fileAccessOffMessage": "To open a local file, turn on General > PDF Viewer > Inline PDF Viewer first. That setting is what gives the browser access to files on the device.",
       "allFilesNeededTitle": "Access to all files is needed",
-      "allFilesNeededMessage": "This file is outside FreeKiosk's own folder. On the next screen, allow FreeKiosk to access all files, then come back and save again.",
+      "allFilesNeededMessage": "This file is outside AapKiosk's own folder. On the next screen, allow AapKiosk to access all files, then come back and save again.",
       "allFilesOpenSettings": "Open settings",
       "allFilesCancel": "Cancel",
-      "allFilesUnavailableTitle": "File outside FreeKiosk's folder",
-      "allFilesUnavailableMessage": "This version of FreeKiosk cannot read files outside its own folder. Copy the file to Android/data/com.freekiosk/files/ on the device, or choose it with \"Choose a local HTML file\".",
+      "allFilesUnavailableTitle": "File outside AapKiosk's folder",
+      "allFilesUnavailableMessage": "This version of AapKiosk cannot read files outside its own folder. Copy the file to Android/data/com.freekiosk/files/ on the device, or choose it with \"Choose a local HTML file\".",
       "passwordNotSavedTitle": "Password not saved",
       "basicAuthNotSavedMessage": "The HTTP Basic Auth password could not be written to secure storage on this device. Every other setting on this screen was saved. This happens on firmwares whose Android Keystore is broken.",
       "downloadProgress": "{{percent}}% ({{done}} / {{total}} MB)",
